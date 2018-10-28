@@ -1,0 +1,206 @@
+﻿<Window x:Class="ProjectWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="670" Width="1100"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/ButtonStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/ExpanderStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Lables.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+    <Grid Background="LightYellow">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Margin="2 2 2 0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+                Background="Black" CornerRadius="2">
+        </Border>
+
+        <Label Style="{StaticResource lbLanguage}" 
+               Grid.Row="0" 
+               Grid.Column="2" 
+               Content="Language"/>
+
+        <ToggleButton x:Name="Popup_button" Margin="0,5,10,0" Grid.Row="0" 
+                      HorizontalAlignment="Right"
+                      Style="{StaticResource PopupToggleButton}" 
+                      RenderTransformOrigin="0.484,0.5" 
+                      Width="4" Height="7" Grid.Column="2"
+                     >
+
+        </ToggleButton>
+
+        <Popup StaysOpen="True" IsOpen="{Binding IsChecked, ElementName=Popup_button, Mode=TwoWay}" 
+                   PlacementTarget="{Binding ElementName=Popup_button}" 
+                   AllowsTransparency="True"
+                   PopupAnimation="Slide"
+                   HorizontalOffset="-75"
+                   VerticalOffset="0" Margin="0,0,60,0">
+            <ContentControl Style="{DynamicResource Popup_style}" Width="110" RenderTransformOrigin="0.489,0.511" Height="100">
+                <StackPanel Margin="5 10 5 5" >
+                    <Button Content="Русский" Width="90" Margin="0,0,5,0" RenderTransformOrigin="3.45,0.156" HorizontalAlignment="Right" Height="23"/>
+                    <Button Content="Ангийский" Width="90" Margin="0 5 0 0"/>
+                    <Button Content="Казахский" Width="90" Margin="0 5 0 0"/>
+                </StackPanel>
+            </ContentControl>
+        </Popup>
+
+        <Border Margin="2 2 2 0" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2"
+                Background="Black" CornerRadius="2">
+        </Border>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="2 2 2 2" >
+            <Button Width="Auto" Height="42"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style ="{StaticResource ForHome}"
+                    Click="Button_Click_1">Главная</Button>
+
+            <Button Width="Auto" Height="42"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource ForWorks}"
+                    >Отложенные работы</Button>
+
+            <Button Width="Auto" Height="42"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource FinishWorks}">Выполненные работы</Button>
+
+            <Button Width="Auto" Height="42"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource Agregations}">Агрегат</Button>
+
+            <Button Width="Auto" Height="42"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource WorksAndHours}">Моточасы</Button>
+
+            <Button Width="Auto" Height="42"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource Materials}">Расходные материалы</Button>
+
+            <Button Width="Auto" Height="41"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource Planing}">Планирование</Button>
+
+            <Button Width="Auto" Height="41"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource Project}">Проект</Button>
+
+            <Button Width="Auto" Height="41" 
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource CarList}"
+                    Click="Button_Click">Список машин</Button>
+
+            <Button Width="Auto" Height="41"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource References}">Справочники</Button>
+
+            <Button Width="Auto" Height="41"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource Access}">Доступы</Button>
+
+            <Button Width="Auto" Height="41"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Margin="0 0 0 1"
+                    Style="{StaticResource Check}">Checklist</Button>
+
+            <Button Width="Auto" Height="42"
+                    BorderThickness="0 0 0 0"
+                    BorderBrush="Transparent"
+                    Style="{StaticResource Reports}">Отчеты</Button>
+
+        </StackPanel>
+
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" 
+              Margin="2 2 2 2" Background="LightYellow">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="556"/>
+            </Grid.RowDefinitions>
+
+            <WrapPanel Grid.Row="0" 
+                       VerticalAlignment="Top" 
+                       HorizontalAlignment="Left" 
+                       Orientation="Horizontal" Margin="0,0,0,0"
+                       Background="LightYellow">
+                <Label Style="{StaticResource LbStyles}"
+                       Content="MCS"
+                       Background="LightYellow"></Label>
+                
+                <Label Style="{StaticResource LbStyle}"
+                       Content="Maintenance Control System"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"
+                       FontSize="12"
+                       Margin="0,0,0,3"
+                       Background="LightYellow"></Label>
+            </WrapPanel>
+
+            <StackPanel Margin="0,50,0,400">
+                <Border Margin="10,2" Height="40"
+                        Background="Gold">
+                    <WrapPanel>
+                        <Image Source="IMG/Main.png" Height="15" Margin="5"></Image>
+                        <Label Content="Главная"
+                               FontSize="15"
+                               FontStyle="Italic"
+                               Margin="5"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Bottom"></Label>
+                    </WrapPanel>
+                </Border>
+                <Border Margin="10,2" Height="50" Background="LightGray">
+                    <Button Content="+ Добавить машину" 
+                            Height="30" 
+                            Width="150"
+                            HorizontalAlignment="Left"
+                            Margin="0,10,724,10"
+                            Background="Green"
+                            Foreground="White"
+                            Click="bbn_AddCar"></Button>
+                </Border>
+            </StackPanel>
+            
+            <Frame Grid.Row="3" Grid.Column="1" x:Name="CentralFrame" Margin="0,-1,0,-5" NavigationUIVisibility="Hidden" />
+
+        </Grid>
+    </Grid>
+</Window>

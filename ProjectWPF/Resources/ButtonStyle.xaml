@@ -1,0 +1,359 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ProjectWPF.Resources">
+
+
+    <Style x:Key="ForHome" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Main.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+    
+    <Style x:Key="ForWorks" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Woks.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="FinishWorks" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Tools.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="Agregations" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Mech.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="WorksAndHours" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Watches.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="Materials" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Mater.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="Project" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Earth.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="CarList" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/List.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="Planing" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Cal.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="References" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Graph.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="Access" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Dos.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="Check" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/CHeck.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="Reports" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="#3d3d3d">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="../IMG/Docs.png" Width="10" VerticalAlignment="Center" Margin="5">
+                                </Image>
+                                <ContentPresenter Margin="5" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  TargetName ="border" Value="#fbbb00"></Setter>
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style.Setters>
+    </Style>
+
+    
+    
+</ResourceDictionary>

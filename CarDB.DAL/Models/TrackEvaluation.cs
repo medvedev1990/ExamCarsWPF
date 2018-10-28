@@ -1,0 +1,131 @@
+namespace CarDB.DAL.Models
+{
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("TrackEvaluation")]
+    public partial class TrackEvaluation
+    {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TrackEvaluation()
+        {
+            TrackEvaluationComment = new HashSet<TrackEvaluationComment>();
+            TrackEvaluationPart = new HashSet<TrackEvaluationPart>();
+            TrackEvaluationSimsData = new HashSet<TrackEvaluationSimsData>();
+        }
+
+        [Key]
+        public int intEvalutionId { get; set; }
+
+        public int? intEvalutionNumber { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? dCreateDate { get; set; }
+
+        public int? intCreateUserId { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? dCreateDateBL { get; set; }
+
+        public int? intCreateUserIdBL { get; set; }
+
+        [StringLength(1024)]
+        public string CustomerRequestNumber { get; set; }
+
+        public int? intTypeOfInspection { get; set; }
+
+        public int? intSMCSComponentID { get; set; }
+
+        public int? intMachineSystem { get; set; }
+
+        public int? intStatysId { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? dSendDateCustomer { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? dReceiveDateCustomer { get; set; }
+
+        [StringLength(255)]
+        public string strOrderNo { get; set; }
+
+        [StringLength(255)]
+        public string strSalesOrderNumber { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? dDateOfSale { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? dEstimatedDateArrival { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? dArrivalDate { get; set; }
+
+        public int? intEquipmentID { get; set; }
+
+        public double? intMetered { get; set; }
+
+        [StringLength(1024)]
+        public string strDescriptionDefect { get; set; }
+
+        [StringLength(1024)]
+        public string strReasonDefect { get; set; }
+
+        [StringLength(1024)]
+        public string strRemedyDefect { get; set; }
+
+        [StringLength(1024)]
+        public string strSymptoms { get; set; }
+
+        public int? intPriority { get; set; }
+
+        public double? floatETTR { get; set; }
+
+        public double? floatELTR { get; set; }
+
+        public int? intConfirmUserId { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? dConfirmDate { get; set; }
+
+        public bool? intConfirmStatus { get; set; }
+
+        public int? intStatus { get; set; }
+
+        public int? intLocationId { get; set; }
+
+        public int? intServiceHistoryId { get; set; }
+
+        public int? intEvaluationSysStatusId { get; set; }
+
+        public virtual newEquipment newEquipment { get; set; }
+
+        public virtual TableEvaluationPriority TableEvaluationPriority { get; set; }
+
+        public virtual TableEvaluationStatys TableEvaluationStatys { get; set; }
+
+        public virtual TableEvaluationSysStatus TableEvaluationSysStatus { get; set; }
+
+        public virtual TablesLocation TablesLocation { get; set; }
+
+        public virtual TablesMachineSystem TablesMachineSystem { get; set; }
+
+        public virtual TablesSMCSComponent TablesSMCSComponent { get; set; }
+
+        public virtual TablesTypesInspection TablesTypesInspection { get; set; }
+
+        public virtual User User { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TrackEvaluationComment> TrackEvaluationComment { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TrackEvaluationPart> TrackEvaluationPart { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TrackEvaluationSimsData> TrackEvaluationSimsData { get; set; }
+    }
+}
